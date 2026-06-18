@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>자주 묻는 질문</title>
+  <style>
+    /* --- Optional base styling. Safe to delete and replace with your own. --- */
+    :root { --maxw: 760px; }
+    main { max-width: var(--maxw); margin: 0 auto; padding: 2rem 1.25rem;
+           font: 16px/1.7 -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+           color: #1f2328; }
+    h1 { font-size: 1.8rem; margin: 0 0 1.5rem; }
+    h2 { font-size: 1.35rem; margin: 2.2rem 0 .8rem; padding-top: 1rem; border-top: 1px solid #eaecef; }
+    h3 { font-size: 1.08rem; margin: 1.4rem 0 .5rem; }
+    p, li { margin: .4rem 0; }
+    ul, ol { padding-left: 1.4rem; }
+    a { color: #2b6cb0; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #d8dee4; padding: .5rem .7rem; text-align: left; }
+    th { background: #f6f8fa; }
+    code { background: #f3f4f6; padding: .1rem .35rem; border-radius: 4px; font-size: .9em; }
+    aside.callout { background: #f6f8fa; border: 1px solid #e1e4e8; border-radius: 8px;
+                    padding: .9rem 1rem; margin: 1rem 0; }
+    details { border: 1px solid #e1e4e8; border-radius: 8px; padding: .4rem .9rem; margin: .6rem 0; }
+    summary { cursor: pointer; font-weight: 600; padding: .4rem 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>자주 묻는 질문</h1>
+    <h2>👟걸음 수 및 데이터</h2>
+    <p><strong>Q. 안드로이드와 iOS 최소 지원 버전은 무엇인가요?</strong></p>
+    <p>A. Android 9.0 이상, iOS 15.0 이상이면 워키파이를 사용하실 수 있어요. 사용 중인 OS 버전은 휴대폰 [설정 > 정보]에서 확인할 수 있어요.</p>
+    <p><strong>Q. 워키파이는 어떤 데이터를 가져오나요?</strong></p>
+    <p>A. 워키파이는 걸음 수만 가져와요. iOS(아이폰)은 ‘건강’앱에서 안드로이드는 ‘헬스 커넥터’에서 걸음 수만 안전하게 읽어옵니다</p>
+    <p><strong>Q. 걸음 수가 측정이 안되면 어떻게 해야 되나요?</strong></p>
+    <p><strong>A.</strong> 스마트폰 기종에 따라 아래 권한이 모두 ‘허용’되어 있는지 확인해 주세요.</p>
+    <ul>
+      <li>
+        <details>
+          <summary><strong>iOS (아이폰)</strong></summary>
+          <ul>
+            <li><code>건강</code> 앱 → 우측 상단 [프로필 아이콘] → 앱 및 서비스 → <code>워키파이</code> → <code>걸음 수</code> 읽기 허용</li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary><strong>안드로이드 (갤럭시 등)</strong></summary>
+          <p>1) 안드로이드 14 이상: <code>설정</code>앱 → <code>헬스 커넥트</code>검색 (또는 보안 및 개인정보 보호 > 개인정보 보호 > 헬스 커넥트) → 앱 권한 → <code>워키파이</code>→ 모두 허용</p>
+          <p>2) 안드로이드 13 이하:</p>
+          <p>① 구글 플레이 스토어에서 <code>헬스 커넥트</code>앱을 설치해주세요</p>
+          <p>② <code>헬스 커넥트</code>앱 → 앱 권한 → <code>워키파이</code> → 모두 허용</p>
+          <aside class="callout">
+            <p><strong>데이터가 바로 반영되지 않나요?</strong></p>
+            <p>헬스 커넥트 권한을 처음 허용했거나 안드로이드 13 이하 환경에서 앱을 새로 설치한 경우, 데이터가 워키파이로 넘어오기까지 보통 1~2시간, 길게는 최대 24시간이 걸릴 수 있습니다. 걸음 수가 바로 '0'으로 보이더라도 잠시 후 다시 확인해 주세요!</p>
+          </aside>
+        </details>
+      </li>
+    </ul>
+    <p><strong>Q. 스마트 워치 데이터도 연동되나요?</strong></p>
+    <p><strong>A.</strong> 네, 연동돼요. 워치로 측정한 걸음이 건강 앱(iOS) 또는 헬스 커넥트(Android)로 동기화되면 워키파이에 자동으로 반영돼요. 워치 걸음이 잘 보이지 않는다면, 워치 전용 앱(예: 삼성 헬스, Fitbit 등)이 건강 앱·헬스 커넥트와 연결되어 있는지 확인해 주세요..</p>
+    <p><strong>Q. 스마트 워치로 워키파이 앱을 사용할 수 있나요?</strong></p>
+    <p><strong>A.</strong> 스마트 워치에 설치해서 사용하는 ‘워치 전용 워키파이 앱’은 아직 지원하지 않아요.</p>
+    <p><strong>Q. 건강 앱이나 헬스 커넥트보다 워키파이의 걸음 수가 늦게 반영돼요.</strong></p>
+    <p><strong>A.</strong> 워키파이는 건강 앱(iOS) 또는 헬스 커넥트(Android)에서 걸음 수를 받아와요. 이 두 앱이 먼저 걸음을 기록한 뒤 워키파이로 전달되는 구조라, 짧게는 몇 분, 길게는 10~15분 정도 차이가 날 수 있어요. 더 빠르게 확인하고 싶다면<strong> ① </strong>워키파이를 완전히 종료한 후 다시 열거나 ② 메인 화면에서 아래로 당겨 새로고침을 해보세요.</p>
+    <p><strong>Q. 가족의 활동량 변화는 언제 알려주나요?</strong></p>
+    <p><strong>A.</strong> 걸음 수 목표를 달성하거나, 걸음 수가 저조한 날이 며칠간 이어질 때 푸시 알림으로 알려드려요. 알림을 받은 날에는 가족에게 직접 전화를 걸어 안부를 확인해 보세요.</p>
+    <p><strong>Q. 위치 추적(GPS) 기능도 되나요?</strong></p>
+    <p><strong>A.</strong> 워키파이는 위치 데이터를 수집하거나 활용하지 않아요. 오직 ‘걸음 수’ 데이터만 수집해요.</p>
+    <p><strong>Q. 목표 걸음 수를 바꿨는데 업데이트가 안돼요.</strong></p>
+    <p><strong>A.</strong> 변경된 목표 걸음 수는 다음날(밤 12시 이후)부터 반영돼요. 혹시 그 이후에도 반영이 안된다면, 스마트폰 기종과 OS 버전을 확인하여 ‘워키파이 카카오톡 채널’로 문의해 주세요</p>
+    <h2>🏡가족방</h2>
+    <p><strong>Q. 가족이 해외에 있어요. 사용 가능할까요?</strong></p>
+    <p><strong>A.</strong> 워키파이 앱은 아직 한국에서만 사용 가능해요.</p>
+    <p><strong>Q. 꼭 가족끼리만 사용해야 하나요?</strong></p>
+    <p><strong>A.</strong> 가족뿐만 아니라 연인, 친구 등 일상을 공유하고 가벼운 응원을 주고받고 싶은 분들이라면 누구나 함께 사용 가능해요.</p>
+    <p><strong>Q. 가족 방을 추가로 만들 수 있나요?</strong></p>
+    <p><strong>A.</strong> 현재는 하나의 계정 당 하나의 가족 방에만 참여할 수 있어요. 이미 가족 방에 들어가 있다면 새로운 방을 추가로 만들거나, 다른 초대를 받아도 중복으로 입장할 수 없으니 참고해 주세요.</p>
+    <p><strong>Q. 가족 방에는 몇 명까지 들어갈 수 있나요?</strong></p>
+    <p><strong>A.</strong> 밀도 있는 소통을 위해 가족 방에 본인 포함 최대 5명까지만 참여할 수 있어요.</p>
+    <p><strong>Q. 가족 방 구성원을 내보내고 싶어요.</strong></p>
+    <p><strong>A.</strong> 현재 임의로 특정 가족을 내보내는 기능은 지원하지 않아요. 본인이 앱 설정에서 직접 탈퇴해야 해요.</p>
+    <p><strong>Q. 가족 방 관리는 어떻게 하나요?</strong></p>
+    <p><strong>A.</strong> 가족 방을 처음 만든 사람이 '리더'가 되며, [설정 > 가족방] 탭에서 방 이름을 수정할 수 있어요. 가족 초대는 [설정 > 가족 초대]에서 누구나 할 수 있어요. 리더가 탈퇴할 경우, 두 번째로 가입한 가족에게 리더 권한이 자동으로 넘어가요.</p>
+    <h2>🚪탈퇴 정책</h2>
+    <p><strong>Q. 앱을 탈퇴하면 데이터가 다 사라지나요?</strong></p>
+    <p><strong>A.</strong> 네, 회원 탈퇴 즉시 워키파이에 저장된 가입 정보와 그동안의 걷기 기록과 메시지를 주고 받은 기록이 모두 안전하게 삭제돼요.</p>
+    <p><strong>Q. 앱을 탈퇴하면 건강 데이터 연동도 자동으로 끊어지나요?</strong></p>
+    <p><strong>A.</strong> 스마트폰의 보안 정책상, 앱을 탈퇴하거나 삭제하더라도 기기에 허용된 '건강 데이터 접근 권한'이 자동으로 해제되지는 않아요. 연동 권한을 완전히 끊으시려면 스마트폰의 자체 설정(애플 건강, 헬스 커넥트)에서 직접 워키파이의 접근 권한을 해제해 주셔야 해요.</p>
+    <p>⭐<strong> <br/>안내해 드린 방법으로도 해결되지 않거나 그 외에 궁금한 사항이 있으시다면 <br/>언제든 이메일로 문의해 주세요. 최대한 빠르게 도와드리겠습니다!</strong></p>
+    <p>📧 <strong>contact@hong-nam.com</strong></p>
+  </main>
+</body>
+</html>
