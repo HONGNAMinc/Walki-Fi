@@ -1,96 +1,763 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>자주 묻는 질문</title>
-  <style>
-    /* --- Optional base styling. Safe to delete and replace with your own. --- */
-    :root { --maxw: 760px; }
-    main { max-width: var(--maxw); margin: 0 auto; padding: 2rem 1.25rem;
-           font: 16px/1.7 -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
-           color: #1f2328; }
-    h1 { font-size: 1.8rem; margin: 0 0 1.5rem; }
-    h2 { font-size: 1.35rem; margin: 2.2rem 0 .8rem; padding-top: 1rem; border-top: 1px solid #eaecef; }
-    h3 { font-size: 1.08rem; margin: 1.4rem 0 .5rem; }
-    p, li { margin: .4rem 0; }
-    ul, ol { padding-left: 1.4rem; }
-    a { color: #2b6cb0; }
-    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
-    th, td { border: 1px solid #d8dee4; padding: .5rem .7rem; text-align: left; }
-    th { background: #f6f8fa; }
-    code { background: #f3f4f6; padding: .1rem .35rem; border-radius: 4px; font-size: .9em; }
-    aside.callout { background: #f6f8fa; border: 1px solid #e1e4e8; border-radius: 8px;
-                    padding: .9rem 1rem; margin: 1rem 0; }
-    details { border: 1px solid #e1e4e8; border-radius: 8px; padding: .4rem .9rem; margin: .6rem 0; }
-    summary { cursor: pointer; font-weight: 600; padding: .4rem 0; }
-  </style>
-</head>
-<body>
-  <main>
-    <h1>자주 묻는 질문</h1>
-    <h2>👟걸음 수 및 데이터</h2>
-    <p><strong>Q. 안드로이드와 iOS 최소 지원 버전은 무엇인가요?</strong></p>
-    <p>A. Android 9.0 이상, iOS 15.0 이상이면 워키파이를 사용하실 수 있어요. 사용 중인 OS 버전은 휴대폰 [설정 > 정보]에서 확인할 수 있어요.</p>
-    <p><strong>Q. 워키파이는 어떤 데이터를 가져오나요?</strong></p>
-    <p>A. 워키파이는 걸음 수만 가져와요. iOS(아이폰)은 ‘건강’앱에서 안드로이드는 ‘헬스 커넥터’에서 걸음 수만 안전하게 읽어옵니다</p>
-    <p><strong>Q. 걸음 수가 측정이 안되면 어떻게 해야 되나요?</strong></p>
-    <p><strong>A.</strong> 스마트폰 기종에 따라 아래 권한이 모두 ‘허용’되어 있는지 확인해 주세요.</p>
-    <ul>
-      <li>
-        <details>
-          <summary><strong>iOS (아이폰)</strong></summary>
-          <ul>
-            <li><code>건강</code> 앱 → 우측 상단 [프로필 아이콘] → 앱 및 서비스 → <code>워키파이</code> → <code>걸음 수</code> 읽기 허용</li>
-          </ul>
-        </details>
-      </li>
-      <li>
-        <details>
-          <summary><strong>안드로이드 (갤럭시 등)</strong></summary>
-          <p>1) 안드로이드 14 이상: <code>설정</code>앱 → <code>헬스 커넥트</code>검색 (또는 보안 및 개인정보 보호 > 개인정보 보호 > 헬스 커넥트) → 앱 권한 → <code>워키파이</code>→ 모두 허용</p>
-          <p>2) 안드로이드 13 이하:</p>
-          <p>① 구글 플레이 스토어에서 <code>헬스 커넥트</code>앱을 설치해주세요</p>
-          <p>② <code>헬스 커넥트</code>앱 → 앱 권한 → <code>워키파이</code> → 모두 허용</p>
-          <aside class="callout">
-            <p><strong>데이터가 바로 반영되지 않나요?</strong></p>
-            <p>헬스 커넥트 권한을 처음 허용했거나 안드로이드 13 이하 환경에서 앱을 새로 설치한 경우, 데이터가 워키파이로 넘어오기까지 보통 1~2시간, 길게는 최대 24시간이 걸릴 수 있습니다. 걸음 수가 바로 '0'으로 보이더라도 잠시 후 다시 확인해 주세요!</p>
-          </aside>
-        </details>
-      </li>
-    </ul>
-    <p><strong>Q. 스마트 워치 데이터도 연동되나요?</strong></p>
-    <p><strong>A.</strong> 네, 연동돼요. 워치로 측정한 걸음이 건강 앱(iOS) 또는 헬스 커넥트(Android)로 동기화되면 워키파이에 자동으로 반영돼요. 워치 걸음이 잘 보이지 않는다면, 워치 전용 앱(예: 삼성 헬스, Fitbit 등)이 건강 앱·헬스 커넥트와 연결되어 있는지 확인해 주세요..</p>
-    <p><strong>Q. 스마트 워치로 워키파이 앱을 사용할 수 있나요?</strong></p>
-    <p><strong>A.</strong> 스마트 워치에 설치해서 사용하는 ‘워치 전용 워키파이 앱’은 아직 지원하지 않아요.</p>
-    <p><strong>Q. 건강 앱이나 헬스 커넥트보다 워키파이의 걸음 수가 늦게 반영돼요.</strong></p>
-    <p><strong>A.</strong> 워키파이는 건강 앱(iOS) 또는 헬스 커넥트(Android)에서 걸음 수를 받아와요. 이 두 앱이 먼저 걸음을 기록한 뒤 워키파이로 전달되는 구조라, 짧게는 몇 분, 길게는 10~15분 정도 차이가 날 수 있어요. 더 빠르게 확인하고 싶다면<strong> ① </strong>워키파이를 완전히 종료한 후 다시 열거나 ② 메인 화면에서 아래로 당겨 새로고침을 해보세요.</p>
-    <p><strong>Q. 가족의 활동량 변화는 언제 알려주나요?</strong></p>
-    <p><strong>A.</strong> 걸음 수 목표를 달성하거나, 걸음 수가 저조한 날이 며칠간 이어질 때 푸시 알림으로 알려드려요. 알림을 받은 날에는 가족에게 직접 전화를 걸어 안부를 확인해 보세요.</p>
-    <p><strong>Q. 위치 추적(GPS) 기능도 되나요?</strong></p>
-    <p><strong>A.</strong> 워키파이는 위치 데이터를 수집하거나 활용하지 않아요. 오직 ‘걸음 수’ 데이터만 수집해요.</p>
-    <p><strong>Q. 목표 걸음 수를 바꿨는데 업데이트가 안돼요.</strong></p>
-    <p><strong>A.</strong> 변경된 목표 걸음 수는 다음날(밤 12시 이후)부터 반영돼요. 혹시 그 이후에도 반영이 안된다면, 스마트폰 기종과 OS 버전을 확인하여 ‘워키파이 카카오톡 채널’로 문의해 주세요</p>
-    <h2>🏡가족방</h2>
-    <p><strong>Q. 가족이 해외에 있어요. 사용 가능할까요?</strong></p>
-    <p><strong>A.</strong> 워키파이 앱은 아직 한국에서만 사용 가능해요.</p>
-    <p><strong>Q. 꼭 가족끼리만 사용해야 하나요?</strong></p>
-    <p><strong>A.</strong> 가족뿐만 아니라 연인, 친구 등 일상을 공유하고 가벼운 응원을 주고받고 싶은 분들이라면 누구나 함께 사용 가능해요.</p>
-    <p><strong>Q. 가족 방을 추가로 만들 수 있나요?</strong></p>
-    <p><strong>A.</strong> 현재는 하나의 계정 당 하나의 가족 방에만 참여할 수 있어요. 이미 가족 방에 들어가 있다면 새로운 방을 추가로 만들거나, 다른 초대를 받아도 중복으로 입장할 수 없으니 참고해 주세요.</p>
-    <p><strong>Q. 가족 방에는 몇 명까지 들어갈 수 있나요?</strong></p>
-    <p><strong>A.</strong> 밀도 있는 소통을 위해 가족 방에 본인 포함 최대 5명까지만 참여할 수 있어요.</p>
-    <p><strong>Q. 가족 방 구성원을 내보내고 싶어요.</strong></p>
-    <p><strong>A.</strong> 현재 임의로 특정 가족을 내보내는 기능은 지원하지 않아요. 본인이 앱 설정에서 직접 탈퇴해야 해요.</p>
-    <p><strong>Q. 가족 방 관리는 어떻게 하나요?</strong></p>
-    <p><strong>A.</strong> 가족 방을 처음 만든 사람이 '리더'가 되며, [설정 > 가족방] 탭에서 방 이름을 수정할 수 있어요. 가족 초대는 [설정 > 가족 초대]에서 누구나 할 수 있어요. 리더가 탈퇴할 경우, 두 번째로 가입한 가족에게 리더 권한이 자동으로 넘어가요.</p>
-    <h2>🚪탈퇴 정책</h2>
-    <p><strong>Q. 앱을 탈퇴하면 데이터가 다 사라지나요?</strong></p>
-    <p><strong>A.</strong> 네, 회원 탈퇴 즉시 워키파이에 저장된 가입 정보와 그동안의 걷기 기록과 메시지를 주고 받은 기록이 모두 안전하게 삭제돼요.</p>
-    <p><strong>Q. 앱을 탈퇴하면 건강 데이터 연동도 자동으로 끊어지나요?</strong></p>
-    <p><strong>A.</strong> 스마트폰의 보안 정책상, 앱을 탈퇴하거나 삭제하더라도 기기에 허용된 '건강 데이터 접근 권한'이 자동으로 해제되지는 않아요. 연동 권한을 완전히 끊으시려면 스마트폰의 자체 설정(애플 건강, 헬스 커넥트)에서 직접 워키파이의 접근 권한을 해제해 주셔야 해요.</p>
-    <p>⭐<strong> <br/>안내해 드린 방법으로도 해결되지 않거나 그 외에 궁금한 사항이 있으시다면 <br/>언제든 이메일로 문의해 주세요. 최대한 빠르게 도와드리겠습니다!</strong></p>
-    <p>📧 <strong>contact@hong-nam.com</strong></p>
-  </main>
-</body>
-</html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>자주 묻는 질문</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="366a7007-51e8-80cf-b898-c35cf73ce5f2" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🙋🏻‍♀️</span></div><h1 class="page-title" dir="auto">자주 묻는 질문</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><h2 id="36ca7007-51e8-80fb-bddb-c9c0267beb65" class="">👟 걸음 수 및 데이터</h2></div><div style="display:contents" dir="auto"><p id="37ba7007-51e8-8073-9ffc-cdc70debd204" class=""><strong>Q. 안드로이드와 iOS 최소 지원 버전은 무엇인가요?</strong></p></div><div style="display:contents" dir="auto"><p id="d86326d5-fc60-442e-87dd-5e99c0404313" class="block-color-red">Android 9.0 이상, iOS 15.0 이상이면 워키파이를 사용하실 수 있어요. 사용 중인 OS 버전은 휴대폰 [설정 &gt; 정보]에서 확인할 수 있어요.</p></div><div style="display:contents" dir="auto"><p id="3568a3ed-0177-42f5-9f6b-7ae60651eea5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="37ba7007-51e8-80ae-b3f3-e1331ff9c608" class=""><strong>Q. 워키파이는 어떤 데이터를 가져오나요?</strong></p></div><div style="display:contents" dir="auto"><p id="557c325a-16e1-4af9-bf38-11152815cf48" class="">워키파이는 걸음 수만 가져와요. iOS(아이폰)은 ‘건강’앱에서 안드로이드는 ‘헬스 커넥터’에서 걸음 수만 안전하게 읽어옵니다</p></div><div style="display:contents" dir="auto"><p id="4229df99-8880-40f9-8ba7-ed684bd08420" class="">
+</p></div><div style="display:contents" dir="auto"><p id="36ca7007-51e8-80c9-b89f-c3785be33244" class=""><strong>Q. 걸음 수가 측정이 안되면 어떻게 해야 되나요?</strong></p></div><div style="display:contents" dir="auto"><p id="610c20e1-b853-4b0f-921c-606cd2246afb" class="">스마트폰 기종에 따라 아래 권한이 모두 ‘허용’되어 있는지 확인해 주세요.</p></div><div style="display:contents" dir="auto"><ul id="7bc93625-ff2c-4e4f-8bc7-a1bfba147879" class="toggle"><li><details open=""><summary><strong>iOS (아이폰)</strong></summary><div style="display:contents" dir="auto"><ul id="5649b535-fd4b-413a-b933-9ac3d8adb8a1" class="bulleted-list"><li style="list-style-type:disc"><code>건강</code> 앱 → 우측 상단 [프로필 아이콘] → 앱 및 서비스 → <code>워키파이</code> → <code>걸음 수</code> 읽기 허용</li></ul></div><div style="display:contents" dir="ltr"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5ccb0ab3-98ae-4085-9c70-84ee6621093d"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="5364e6d7-e7c2-43bc-89c9-de24bef7ea20" class=""><strong>걸음 수가 자동으로 업데이트 되지 않나요?</strong>  </p></div><div style="display:contents" dir="auto"><p id="4a2e4c1d-58d0-4563-b91e-8e12fbc267c7" class="">iOS는 기기 특성상 기본적으로 <strong>워키파이 앱을 열었을 때</strong> 걸음 수가 업데이트됩니다. 앱을 실행하지 않아도 걸음이 자동으로 갱신되게 하려면 <strong>백그라운드 앱 새로고침</strong>을 켜주세요.  </p></div><div style="display:contents" dir="auto"><p id="0337d040-51a9-401f-ad5e-829ca847a602" class=""><code>설정</code> → <code>일반</code> → <code>백그라운드 앱 새로고침</code> → <code>워키파이</code> 허용</p></div></div></figure></div></details></li></ul></div><div style="display:contents" dir="auto"><ul id="9f2b14da-c80e-4ac3-bcd9-1a3df05aac67" class="toggle"><li><details open=""><summary><strong>안드로이드 (갤럭시 등)</strong></summary><div style="display:contents" dir="auto"><p id="0be5e0b7-3f88-453a-95f9-d3f93e5c94ad" class=""><strong>1) 안드로이드 14 이상:</strong> <code>설정</code>앱 → <code>헬스 커넥트</code>검색 (또는 보안 및 개인정보 보호 &gt; 개인정보 보호 &gt; 헬스 커넥트) → 앱 권한 → <code>워키파이</code>→ 모두 허용</p></div><div style="display:contents" dir="auto"><p id="47b8175f-71b3-4d9c-b2b8-ea24604d4780" class="">
+</p></div><div style="display:contents" dir="auto"><p id="15ec5591-1105-40d7-a12f-af6255d6ce12" class=""><strong>2) 안드로이드 13 이하:</strong></p></div><div style="display:contents" dir="auto"><ol type="1" id="fd7b0649-076a-4118-9dd9-44146ec00738" class="numbered-list" start="1"><li>플레이 스토어에서 <code>헬스 커넥트</code>앱을 설치해주세요</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="f8753c28-bfb9-449c-81e3-e8e4e1bb08b1" class="numbered-list" start="2"><li><code>헬스 커넥트</code>앱 → 앱 권한 → <code>워키파이</code> → 모두 허용</li></ol></div><div style="display:contents" dir="ltr"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="c3ef2a99-a0e1-47f4-9879-6e0d18504c11"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="660f68fe-b425-4b1b-99c5-052f388ae6a4" class=""><strong>데이터가 바로 반영되지 않나요? 아래 순서대로 확인해주세요!</strong></p></div><div style="display:contents" dir="auto"><ul id="16900387-c989-4137-b086-bf09c120ef72" class="toggle"><li><details open=""><summary><strong>1단계:</strong> 먼저 확인해주세요!</summary><div style="display:contents" dir="auto"><p id="00c5f881-8a25-4e57-b438-1959b7ee4e20" class="">헬스 커넥트 권한을 처음 허용했거나 안드로이드 13 이하 환경에서 앱을 새로 설치한 경우, 데이터가 워키파이로 넘어오기까지 보통 1~2시간, 길게는 최대 24시간이 걸릴 수 있습니다. 걸음 수가 바로 &#x27;0&#x27;으로 보이더라도 잠시 후 다시 확인해 주세요!</p></div></details></li></ul></div><div style="display:contents" dir="auto"><ul id="1e59b62c-df28-4c8b-9aa4-dd20bc4168f2" class="toggle"><li><details open=""><summary><strong>2단계:</strong> 그래도 반영되지 않는다면,</summary><div style="display:contents" dir="auto"><p id="3969b5a9-7d34-4d90-8705-58b811934f94" class="">일부 기기에서는 헬스 커넥트가 걸음 수를 직접 수집하지 못해요. 이 경우, 걸음 수를 <strong>기록해 주는 앱</strong>을 함께 연결해야 해요.</p></div><div style="display:contents" dir="auto"><p id="ae7f4f51-b0db-4e48-acb8-3effc54dcf02" class=""><mark class="highlight-orange_background"><strong>삼성(갤럭시) 휴대폰 — 삼성 헬스</strong></mark></p></div><div style="display:contents" dir="auto"><ol type="1" id="7c595581-06ca-4b2c-b55e-345e60c90cd2" class="numbered-list" start="1"><li>삼성 헬스 실행</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="cd02e278-8e38-40e3-bb90-411e06ffedef" class="numbered-list" start="2"><li>헬스 커넥트 → 앱 권한 → <code>삼성 헬스</code> → 걸음 수 허용</li></ol></div><div style="display:contents" dir="auto"><p id="7d30b70c-1300-4c88-aa71-ec99272c0e0f" class=""><mark class="highlight-orange_background"><strong>그 외 휴대폰 — 구글 피트니스(Google Fit)</strong></mark></p></div><div style="display:contents" dir="auto"><ol type="1" id="f7a67141-6f70-4e70-9547-4e52fdd16653" class="numbered-list" start="1"><li>구글 피트니스 설치 후 로그인, ‘신체 활동’<strong> 권한</strong> 허용</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="dfaec683-7223-44ba-af76-5fcee9eae8f5" class="numbered-list" start="2"><li>구글 피트니스 → 프로필 → 설정 → <strong>‘헬스 커넥트와 동기화’ 켜기</strong></li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="fc649f91-1032-45cd-988b-ff2ca342b110" class="numbered-list" start="3"><li>헬스 커넥트 → 앱 권한 → 구글 피트니스 → 걸음 수 허용</li></ol></div><div style="display:contents" dir="auto"><p id="23239e4d-a676-416d-93ea-b8952152594b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="c8d3f4cc-0b9c-4cf9-980f-8f24c0a21721" class="">🚶🏻 권한을 모두 허용한 뒤에는 휴대폰을 들고 몇 분 걸어보세요.  <br/> 그 후 워키파이를 다시 실행하면 걸음 수가 반영돼요.</p></div></details></li></ul></div></div></figure></div></details></li></ul></div><div style="display:contents" dir="auto"><p id="42f6d29d-66a4-4fda-99ca-ce9aa1c9c393" class="">
+</p></div><div style="display:contents" dir="auto"><p id="36ca7007-51e8-8084-a6b6-c2924cb4c1e9" class=""><strong>Q. 스마트 워치 데이터도 연동되나요?</strong></p></div><div style="display:contents" dir="auto"><p id="bb06a86c-5259-4c86-9b07-f01d9e2040ad" class="">네, 연동돼요. 워치로 측정한 걸음이 건강 앱(iOS) 또는 헬스 커넥트(Android)로 동기화되면 워키파이에 자동으로 반영돼요. 워치 걸음이 잘 보이지 않는다면, 워치 전용 앱(예: 삼성 헬스, Fitbit 등)이 건강 앱·헬스 커넥트와 연결되어 있는지 확인해 주세요.</p></div><div style="display:contents" dir="auto"><p id="dcd179d5-c264-4d71-84da-bb975b52b6fa" class="">
+</p></div><div style="display:contents" dir="auto"><p id="36ca7007-51e8-80b5-b9c6-dce8b6b295c6" class=""><strong>Q. 스마트 워치로 워키파이 앱을 사용할 수 있나요?</strong></p></div><div style="display:contents" dir="auto"><p id="36b491b2-38b6-4d5d-a00b-7bb872de4034" class="">스마트 워치에 설치해서 사용하는 ‘워치 전용 워키파이 앱’은 아직 지원하지 않아요.</p></div><div style="display:contents" dir="auto"><p id="809f23aa-a1a6-48f1-9f43-8e3d3c94818f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="37ba7007-51e8-806a-a9f2-e821558bc71c" class=""><strong>Q. 건강 앱이나 헬스 커넥트보다 워키파이의 걸음 수가 늦게 반영돼요.</strong></p></div><div style="display:contents" dir="auto"><p id="2757fa09-4b91-4442-8130-15d46ec2dbd9" class="">워키파이는 건강 앱(iOS) 또는 헬스 커넥트(Android)에서 걸음 수를 받아와요. 이 두 앱이 먼저 걸음을 기록한 뒤 워키파이로 전달되는 구조라, 짧게는 몇 분, 길게는 10~15분 정도 차이가 날 수 있어요. 더 빠르게 확인하고 싶다면<strong> ① </strong>워키파이를 완전히 종료한 후 다시 열거나 ② 메인 화면에서 아래로 당겨 새로고침을 해보세요.</p></div><div style="display:contents" dir="auto"><p id="da7d6753-2db5-4d11-8e6f-17a52a8798e7" class="">
+</p></div><div style="display:contents" dir="auto"><p id="36ca7007-51e8-8060-8b1f-ef381e58125e" class=""><strong>Q. 가족의 활동량 변화는 언제 알려주나요?</strong></p></div><div style="display:contents" dir="auto"><p id="d7c48a2d-1880-462b-8f43-fe3fb3c21e35" class="">걸음 수 목표를 달성하거나, 걸음 수가 저조한 날이 며칠간 이어질 때 푸시 알림으로 알려드려요. 알림을 받은 날에는 가족에게 직접 전화를 걸어 안부를 확인해 보세요.</p></div><div style="display:contents" dir="auto"><p id="3e10ab1e-23c1-4448-ac14-c17aef54d3ef" class="">
+</p></div><div style="display:contents" dir="auto"><p id="36ca7007-51e8-8048-b4fe-e9474a13e784" class=""><strong>Q. 위치 추적(GPS) 기능도 되나요?</strong></p></div><div style="display:contents" dir="auto"><p id="ed2c9a6a-6fe8-4f86-a059-634df3be0ee5" class="">워키파이는 위치 데이터를 수집하거나 활용하지 않아요. 오직 ‘걸음 수’ 데이터만 수집해요.</p></div><div style="display:contents" dir="auto"><p id="db89f55e-4d8b-4bd9-8412-a23f9697e412" class="">
+</p></div><div style="display:contents" dir="auto"><p id="36ca7007-51e8-80e2-b064-fbcec77bc5fe" class=""><strong>Q. 목표 걸음 수를 바꿨는데 업데이트가 안돼요.</strong></p></div><div style="display:contents" dir="auto"><p id="36ca7007-51e8-803f-a503-c69d959209c1" class="">변경된 목표 걸음 수는 다음날(밤 12시 이후)부터 반영돼요. 혹시 그 이후에도 반영이 안된다면, 스마트폰 기종과 OS 버전을 확인하여 ‘워키파이 카카오톡 채널’로 문의해 주세요</p></div><div style="display:contents" dir="auto"><p id="390a7007-51e8-8057-a07c-d9cc6af5b1b8" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="2af97281-3b0b-4f39-9fae-612da87898e9"/></div><div style="display:contents" dir="auto"><h2 id="36c7db5a-253d-42fc-986b-30d7f331d832" class="">🏡 가족방</h2></div><div style="display:contents" dir="auto"><p id="36ca7007-51e8-80cc-91be-d9d4e956a9d2" class=""><strong>Q. 가족이 해외에 있어요. 사용 가능할까요?</strong></p></div><div style="display:contents" dir="auto"><p id="86ce0450-b49e-49e0-8c79-4065dca34b8d" class="">워키파이 앱은 아직 한국에서만 사용 가능해요.</p></div><div style="display:contents" dir="auto"><p id="d0e87438-33f4-4bfa-8685-40498b766290" class="">
+</p></div><div style="display:contents" dir="auto"><p id="36ca7007-51e8-800a-8f8d-e06b6082214f" class=""><strong>Q. 꼭 가족끼리만 사용해야 하나요?</strong></p></div><div style="display:contents" dir="auto"><p id="66637caa-a413-49fc-b380-88705b475443" class="">가족뿐만 아니라 연인, 친구 등 일상을 공유하고 가벼운 응원을 주고받고 싶은 분들이라면 누구나 함께 사용 가능해요.</p></div><div style="display:contents" dir="auto"><p id="bb84ce9d-a271-46a4-9414-c993960fedc4" class="">
+</p></div><div style="display:contents" dir="auto"><p id="36ca7007-51e8-80da-8783-f19a419a62f3" class=""><strong>Q. 가족 방을 추가로 만들 수 있나요?</strong></p></div><div style="display:contents" dir="auto"><p id="b18e8fe4-bae3-40b7-850c-7264444cfa17" class="">현재는 하나의 계정 당 하나의 가족 방에만 참여할 수 있어요. 이미 가족 방에 들어가 있다면 새로운 방을 추가로 만들거나, 다른 초대를 받아도 중복으로 입장할 수 없으니 참고해 주세요.</p></div><div style="display:contents" dir="auto"><p id="3aed5361-3974-4ddc-9329-b8876b2cd6b5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="36ca7007-51e8-80d6-ab31-f29d56f4a6e2" class=""><strong>Q. 가족 방에는 몇 명까지 들어갈 수 있나요?</strong></p></div><div style="display:contents" dir="auto"><p id="c6b26cd4-5bb6-439d-ad90-e4125a4a56df" class="">밀도 있는 소통을 위해 가족 방에 본인 포함 최대 5명까지만 참여할 수 있어요.</p></div><div style="display:contents" dir="auto"><p id="044e58f8-9f4b-4d53-bac3-0835f5f14dc1" class="">
+</p></div><div style="display:contents" dir="auto"><p id="36ca7007-51e8-8070-9d7e-f86139095c04" class=""><strong>Q. 가족 방 구성원을 내보내고 싶어요.</strong></p></div><div style="display:contents" dir="auto"><p id="3196cfba-c65e-4fa1-a8b7-cf8839af3f12" class="">현재 임의로 특정 가족을 내보내는 기능은 지원하지 않아요. 본인이 앱 설정에서 직접 탈퇴해야 해요.</p></div><div style="display:contents" dir="auto"><p id="642be3f6-3cfc-44f2-aaf0-2401346f185a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="36ca7007-51e8-804c-bd26-fe166454f1eb" class=""><strong>Q. 가족 방 관리는 어떻게 하나요?</strong></p></div><div style="display:contents" dir="auto"><p id="36ca7007-51e8-80b3-9d28-e107b14d455b" class="">가족 방을 처음 만든 사람이 &#x27;리더&#x27;가 되며, [설정 &gt; 가족방] 탭에서 방 이름을 수정할 수 있어요. 가족 초대는 [설정 &gt; 가족 초대]에서 누구나 할 수 있어요. 리더가 탈퇴할 경우, 두 번째로 가입한 가족에게 리더 권한이 자동으로 넘어가요.</p></div><div style="display:contents" dir="auto"><p id="390a7007-51e8-806b-8813-c2527870e3db" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="b773340c-219b-44ea-a1bc-d061367bbbb7"/></div><div style="display:contents" dir="auto"><h2 id="6dc4e72d-7630-43d3-982f-866792d3f4d9" class="">🚪 탈퇴 정책</h2></div><div style="display:contents" dir="auto"><p id="36ca7007-51e8-804b-8cd7-eb0f82df7a3c" class=""><strong>Q. 앱을 탈퇴하면 데이터가 다 사라지나요?</strong></p></div><div style="display:contents" dir="auto"><p id="36ca7007-51e8-807d-bf6f-db5ca33b75be" class="">네, 회원 탈퇴 즉시 워키파이에 저장된 가입 정보와 그동안의 걷기 기록과 메시지를 주고 받은 기록이 모두 안전하게 삭제돼요.</p></div><div style="display:contents" dir="auto"><p id="37ca7007-51e8-809c-a09f-da2be1d56b58" class="">
+</p></div><div style="display:contents" dir="auto"><p id="37ca7007-51e8-802c-89c8-dcfbb374e332" class=""><strong>Q. 앱을 탈퇴하면 건강 데이터 연동도 자동으로 끊어지나요?</strong>  </p></div><div style="display:contents" dir="auto"><p id="37ca7007-51e8-80d6-8578-e398714f9bfe" class="">스마트폰의 보안 정책상, 앱을 탈퇴하거나 삭제하더라도 기기에 허용된 &#x27;건강 데이터 접근 권한&#x27;이 자동으로 해제되지는 않아요. 연동 권한을 완전히 끊으시려면 스마트폰의 자체 설정(애플 건강, 헬스 커넥트)에서 직접 워키파이의 접근 권한을 해제해 주셔야 해요.</p></div><div style="display:contents" dir="auto"><p id="390a7007-51e8-80b3-a5ed-c09b26a55950" class="">
+</p></div><div style="display:contents" dir="ltr"><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="3ddfff8c-8efc-49a3-afa7-10d60e2dd787"><div style="font-size:1.5em"><span class="icon">⭐</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="5b791c9e-cd93-4337-a4b5-33b835202169" class="">안내해 드린 방법으로도 해결되지 않거나 그 외에 궁금한 사항이 있으시다면 <br/>언제든 이메일로 문의해 주세요. 최대한 빠르게 도와드리겠습니다!  </p></div><div style="display:contents" dir="auto"><p id="99cfda12-1a5e-4df9-a86b-78fa3264a1f5" class="">📧  <strong><a href="mailto:contact@hong-nam.com">contact@hong-nam.com</a></strong></p></div></div></figure></div><div style="display:contents" dir="auto"><p id="390a7007-51e8-80f9-afb7-e1cbef7c3cbc" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
